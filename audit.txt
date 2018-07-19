@@ -1,0 +1,105 @@
+                                                                                
+                       === npm audit security report ===                        
+                                                                                
+                                                                                
+                                 Manual Review                                  
+             Some vulnerabilities require your attention to resolve             
+                                                                                
+          Visit https://go.npm.me/audit-guide for additional guidance           
+                                                                                
+                                                                                
+  Moderate        Prototype pollution                                           
+                                                                                
+  Package         hoek                                                          
+                                                                                
+  Patched in      > 4.2.0 < 5.0.0 || >= 5.0.3                                   
+                                                                                
+  Dependency of   karma [dev]                                                   
+                                                                                
+  Path            karma > log4js > loggly > request > hawk > boom > hoek        
+                                                                                
+  More info       https://nodesecurity.io/advisories/566                        
+                                                                                
+                                                                                
+  Moderate        Prototype pollution                                           
+                                                                                
+  Package         hoek                                                          
+                                                                                
+  Patched in      > 4.2.0 < 5.0.0 || >= 5.0.3                                   
+                                                                                
+  Dependency of   karma [dev]                                                   
+                                                                                
+  Path            karma > log4js > loggly > request > hawk > cryptiles > boom   
+                  > hoek                                                        
+                                                                                
+  More info       https://nodesecurity.io/advisories/566                        
+                                                                                
+                                                                                
+  Moderate        Prototype pollution                                           
+                                                                                
+  Package         hoek                                                          
+                                                                                
+  Patched in      > 4.2.0 < 5.0.0 || >= 5.0.3                                   
+                                                                                
+  Dependency of   karma [dev]                                                   
+                                                                                
+  Path            karma > log4js > loggly > request > hawk > hoek               
+                                                                                
+  More info       https://nodesecurity.io/advisories/566                        
+                                                                                
+                                                                                
+  Moderate        Prototype pollution                                           
+                                                                                
+  Package         hoek                                                          
+                                                                                
+  Patched in      > 4.2.0 < 5.0.0 || >= 5.0.3                                   
+                                                                                
+  Dependency of   karma [dev]                                                   
+                                                                                
+  Path            karma > log4js > loggly > request > hawk > sntp > hoek        
+                                                                                
+  More info       https://nodesecurity.io/advisories/566                        
+                                                                                
+                                                                                
+  Moderate        Memory Exposure                                               
+                                                                                
+  Package         tunnel-agent                                                  
+                                                                                
+  Patched in      >=0.6.0                                                       
+                                                                                
+  Dependency of   karma [dev]                                                   
+                                                                                
+  Path            karma > log4js > loggly > request > tunnel-agent              
+                                                                                
+  More info       https://nodesecurity.io/advisories/598                        
+                                                                                
+                                                                                
+  Moderate        Out-of-bounds Read                                            
+                                                                                
+  Package         stringstream                                                  
+                                                                                
+  Patched in      No patch available                                            
+                                                                                
+  Dependency of   karma [dev]                                                   
+                                                                                
+  Path            karma > log4js > loggly > request > stringstream              
+                                                                                
+  More info       https://nodesecurity.io/advisories/664                        
+                                                                                
+                                                                                
+  Low             Regular Expression Denial of Service                          
+                                                                                
+  Package         timespan                                                      
+                                                                                
+  Patched in      No patch available                                            
+                                                                                
+  Dependency of   karma [dev]                                                   
+                                                                                
+  Path            karma > log4js > loggly > timespan                            
+                                                                                
+  More info       https://nodesecurity.io/advisories/533                        
+                                                                                
+
+[!] 7 vulnerabilities found - Packages audited: 22258 (22236 dev, 2384 optional)
+    Severity: 1 Low | 6 Moderate
+

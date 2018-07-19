@@ -1,0 +1,69 @@
+<div class="container-fluid">
+    <div class="row" *ngIf="pageElementStatus.htmlShowTemperatureAlert" class="alert alert-danger">
+    <!--Low temperature banner-->
+        Low water temperature detected, current temperature is <strong>{{currentTemperature}}!!</strong>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-4">
+            <!--Query history picker-->
+            <h3>Chart History</h3>
+            <select id="queryDayRange" name="dayRange" [ngModel]="queryDays" (ngModelChange)="onSelectDayRange($event)">
+                <option *ngFor="let dh of dataHistoryOptions" [ngValue]="dh.id">{{dh.name}}</option>
+            </select>
+            <button type="button" class="btn btn-sm" aria-label="Left Align" (click)="onRefreshData()">
+                <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+            </button>
+            
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-8">
+            <!--Temperature Chart-->
+            <!-- <app-temperature-chart *ngIf="pageElementStatus.htmlShowTempChart" (errorMessage)="onErrorMessage($event)"> -->
+            <app-temperature-chart (errorMessage)="onErrorMessage($event)">    
+            </app-temperature-chart>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="row">
+                <div class="col-sm-6">
+                <!--Temperature Gauge-->
+                    <app-temperature-gauge *ngIf="pageElementStatus.htmlShowTemperatureGauge">Loading...</app-temperature-gauge>
+                    <app-temperature-gauge></app-temperature-gauge>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-5">
+            <!--Temperature table-->
+            <div *ngIf="pageElementStatus.htmlShowTempTableRequest">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <input type="checkbox" [(ngModel)]="pageElementStatus.htmlShowTempTable">Show temperatures data
+                    </div>
+                    <app-temperature-table *ngIf="pageElementStatus.htmlShowTempTable">Loading...</app-temperature-table>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-5">     
+    <!--Alert table   -->
+            <div *ngIf="pageElementStatus.htmlShowAlertTableRequest">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        <input type="checkbox" [(ngModel)]="pageElementStatus.htmlShowAlertTable"> Show active alerts 
+                    </div>
+                    <app-temperature-alert *ngIf="pageElementStatus.htmlShowAlertTable" [queryDays]="queryDays">Loading...</app-temperature-alert>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <!--placeholder-->
+            <div class="panel panel-secondary"></div>
+        </div>
+    </div>
+</div>

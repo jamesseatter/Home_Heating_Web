@@ -1,0 +1,17 @@
+<h4>Temperature Values</h4>
+<div class="container-fluid">
+  <table ng-if="tempData" class="table table-hover table-hover table-condensed">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Temperature</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let field of temperatures.reverse()" >
+        <td>{{field.date | date: 'short'}}</td>
+        <td>{{field.temperature}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
