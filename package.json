@@ -27,7 +27,7 @@
     "highcharts": "^6.1.0",
     "highcharts-angular": "github:highcharts/highcharts-angular",
     "mkdirp": "^0.5.1",
-    "moment-timezone": "^0.5.17",
+    "moment-timezone": "^0.5.35",
     "once": "^1.4.0",
     "rxjs": "^6.2.1",
     "wrappy": "^1.0.2",
